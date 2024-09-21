@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-10">
+    <h1 class="text-center text-4xl font-bold mb-5">Admin Dashboard</h1>
+
+    <!-- Real-time widgets -->
+    <div class="grid md:grid-cols-3 gap-5 mb-5">
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-2">Total Users</h2>
+        <p class="text-4xl font-bold">1,203</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-2">Sales Today</h2>
+        <p class="text-4xl font-bold">$3,485</p>
+      </div>
+
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-2">Active Sessions</h2>
+        <p class="text-4xl font-bold">245</p>
+      </div>
+    </div>
+
+    <!-- Real-time Chart -->
+    <div class="bg-white p-5 rounded-lg shadow-lg">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+          label: 'Sales',
+          data: [1200, 1900, 3000, 5000, 2300, 4000, 3800],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
