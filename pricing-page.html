@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive SaaS Pricing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto my-10 p-5">
+    <h1 class="text-center text-4xl font-bold mb-5">Our Pricing</h1>
+
+    <!-- Pricing Toggle -->
+    <div class="flex justify-center mb-10">
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600">
+        <span class="ml-2 text-lg">Toggle Yearly/Monthly</span>
+      </label>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- Card 1 -->
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-3">Basic Plan</h2>
+        <p class="text-gray-600 mb-4">For small teams and projects.</p>
+        <p class="text-4xl font-bold mb-5">$19 <span class="text-lg">/month</span></p>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Get Started</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-3">Pro Plan</h2>
+        <p class="text-gray-600 mb-4">For growing businesses.</p>
+        <p class="text-4xl font-bold mb-5">$49 <span class="text-lg">/month</span></p>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Get Started</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-5 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-3">Enterprise Plan</h2>
+        <p class="text-gray-600 mb-4">For large teams and enterprises.</p>
+        <p class="text-4xl font-bold mb-5">$99 <span class="text-lg">/month</span></p>
+        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg">Get Started</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
